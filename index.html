@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <!-- Test Version for Localhost -->
+    <!-- SEO and Performance Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professionele fotografie op maat in Utrecht. Gespecialiseerd in portretfotografie, commerciële fotografie, dierenfotografie en e-commerce fotografie.">
+    <meta name="keywords" content="Fotografie, Portretfotografie, Commerciële Fotografie, Dierenfotografie, E-commerce Fotografie, Fotoshoot, Utrecht">
+    <meta name="author" content="Fotografie Op Maat">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="http://localhost:8080/">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Fotografie Op Maat - Utrecht">
+    <meta property="og:description" content="Professionele fotografie op maat in Utrecht. Gespecialiseerd in portretfotografie, commerciële fotografie, dierenfotografie en e-commerce fotografie.">
+    <meta property="og:image" content="http://localhost:8080/images/hero-background.jpg">
+    <meta property="og:url" content="http://localhost:8080">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Fotografie Op Maat - Utrecht">
+    <meta property="twitter:description" content="Professionele fotografie op maat in Utrecht.">
+    <meta property="twitter:image" content="http://localhost:8080/images/hero-background.jpg">
+
+    <title>Fotografie Op Maat - Utrecht</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Fotografie Op Maat",
+        "description": "Professionele fotografie op maat in Utrecht. Gespecialiseerd in portretfotografie, commerciële fotografie, dierenfotografie en e-commerce fotografie.",
+        "url": "http://localhost:8080",
+        "telephone": "0680095058",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Proffesor Kohnstammstraat 28",
+            "addressLocality": "Utrecht",
+            "postalCode": "3555WH",
+            "addressCountry": "NL"
+        },
+        "image": "http://localhost:8080/images/hero-background.jpg",
+        "sameAs": [
+            "https://www.instagram.com/fotografieopmaat"
+        ]
+    }
+    </script>
+
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/scripts.js" as="script">
+</head>
+
+<body>
+    <header id="header">
+        <div class="logo">
+            <a href="/" aria-label="Home">
+                <img src="images/logo.png" alt="Fotografie Op Maat Logo">
+                Fotografie Op Maat
+            </a>
+        </div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#home" data-i18n="home">Home</a></li>
+                <li><a href="#offerte" class="cta-button" data-i18n="book_now">Offerte Aanvragen</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero" aria-labelledby="hero-heading" style="background: url('images/DSC_9732.jpg') no-repeat center center/cover;">
+            <div class="hero-content slide-in">
+                <h1 id="hero-heading">Welkom bij Fotografie Op Maat</h1>
+                <p>Fotoshoots op maat die jouw verhaal vertellen.</p>
+            </div>
+        </section>
+
+        <section id="specialties" class="zoom-in" aria-labelledby="specialties-heading">
+            <h2 id="specialties-heading" data-i18n="specialties_heading">Onze Specialiteiten</h2>
+            <div class="specialties-grid">
+                <div class="specialty">
+                    <img src="images/portretfotografie.jpg" alt="Portretfotografie" loading="lazy">
+                    <h3 data-i18n="portrait_photography">Portretfotografie</h3>
+                    <p>Korte beschrijving van portretfotografie.</p>
+                    <a href="#offerte" data-i18n="learn_more">Offerte Aanvragen</a>
+                </div>
+                <div class="specialty">
+                    <img src="images/commerciele_fotografie.jpg" alt="Commerciële Fotografie" loading="lazy">
+                    <h3 data-i18n="commercial_photography">Commerciële Fotografie</h3>
+                    <p>Korte beschrijving van commerciële fotografie.</p>
+                    <a href="#offerte" data-i18n="learn_more">Offerte Aanvragen</a>
+                </div>
+                <div class="specialty">
+                    <img src="images/dierenfotografie.jpg" alt="Dierenfotografie" loading="lazy">
+                    <h3 data-i18n="animal_photography">Dierenfotografie</h3>
+                    <p>Korte beschrijving van dierenfotografie.</p>
+                    <a href="#offerte" data-i18n="learn_more">Offerte Aanvragen</a>
+                </div>
+                <div class="specialty">
+                    <img src="images/ecommerce.jpg" alt="E-commerce Fotografie" loading="lazy">
+                    <h3 data-i18n="ecommerce_photography">E-commerce Fotografie</h3>
+                    <p>Korte beschrijving van e-commerce fotografie.</p>
+                    <a href="#offerte" data-i18n="learn_more">Offerte Aanvragen</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="offerte" class="fade-in" aria-labelledby="offerte-heading">
+            <h2 id="offerte-heading" data-i18n="offerte_heading">Offerte Aanvragen</h2>
+            <form action="submit_quote_request.php" method="POST">
+                <label for="name">Naam:</label>
+                <input id="name" name="name" type="text" required>
+                <label for="email">E-mail:</label>
+                <input id="email" name="email" type="email" required>
+                <label for="service">Kies een dienst:</label>
+                <select id="service" name="service">
+                    <option value="portrait">Portretfotografie</option>
+                    <option value="commercial">Commerciële Fotografie</option>
+                    <option value="animal">Dierenfotografie</option>
+                    <option value="ecommerce">E-commerce Fotografie</option>
+                </select>
+                <label for="message">Uw bericht:</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+                <button type="submit">Verzenden</button>
+            </form>
+        </section>
+    </main>
+
+    <footer itemscope itemtype="http://schema.org/Organization" aria-labelledby="footer-heading">
+        <div class="contact-info" aria-labelledby="contact-info-heading">
+            <h3 id="contact-info-heading" data-i18n="contact_info">Contactgegevens</h3>
+            <address itemprop="address" data-i18n="address">Adres: Proffesor Kohnstammstraat 28, Utrecht, 3555WH</address>
+            <p itemprop="telephone" data-i18n="phone">Telefoon: 0680095058</p>
+            <p itemprop="email" data-i18n="email">E-mail: <a href="mailto:info@fotografieopmaat.com">info@fotografieopmaat.com</a></p>
+        </div>
+        <div class="social-media" aria-labelledby="social-media-heading">
+            <h3 id="social-media-heading" class="sr-only">Social Media</h3>
+            <a href="http://localhost:8080/instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img src="images/Instagram_icon.png" alt="Instagram">
+                @fotografieopmaat
+            </a>
+        </div>
+        <div class="legal-links" aria-labelledby="legal-links-heading">
+            <h3 id="legal-links-heading" class="sr-only">Juridische Links</h3>
+            <a href="#privacy" data-i18n="privacy_policy">Privacybeleid</a> |
+            <a href="#terms" data-i18n="terms_conditions">Algemene Voorwaarden</a>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

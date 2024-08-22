@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professionele fotografie op maat. Gespecialiseerd in e-commerce, portret, commercieel en dierenfotografie.">
+    <meta name="keywords" content="Fotografie, E-commerce Fotografie, Portret Fotografie, Commerciële Fotografie, Dierenfotografie, Fotoshoot">
+    <meta name="author" content="Fotografiebedrijf">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Fotografiebedrijf - Home">
+    <meta property="og:description" content="Professionele fotografie gespecialiseerd in e-commerce, portret, commercieel en dierenfotografie.">
+    <meta property="og:image" content="images/hero-background.jpg">
+    <meta property="og:url" content="https://www.fotografieopmaat.com">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Fotografiebedrijf - Home">
+    <meta property="twitter:description" content="Professionele fotografie gespecialiseerd in e-commerce, portret, commercieel en dierenfotografie.">
+    <meta property="twitter:image" content="images/hero-background.jpg">
+
+    <link rel="canonical" href="https://www.fotografieopmaat.com/">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Fotografiebedrijf",
+        "description": "Professionele fotografie gespecialiseerd in e-commerce, portret, commercieel en dierenfotografie.",
+        "url": "https://www.fotografieopmaat.com",
+        "telephone": "012-3456789",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Hoofdstraat",
+            "addressLocality": "Anytown",
+            "postalCode": "12345"
+        },
+        "image": "https://www.fotografieopmaat.com/images/hero-background.jpg",
+        "sameAs": [
+            "https://www.instagram.com",
+            "https://www.facebook.com",
+            "https://www.linkedin.com"
+        ]
+    }
+    </script>
+
+    <!-- Google Analytics Tracking Code -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+
+    <title>Fotografiebedrijf - Home</title>
+</head>
+
+<body>
+    <header id="header">
+        <div id="language-selector">
+            <select id="language-switcher" aria-label="Language Selector">
+                <option value="en">English</option>
+                <option value="nl" selected>Nederlands</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+            </select>
+        </div>
+        <div class="logo">
+            <a href="/" aria-label="Home">
+                <img src="images/logo.png" alt="Fotografiebedrijf Logo">
+            </a>
+        </div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#home" data-i18n="home">Home</a></li>
+                <li><a href="#about" data-i18n="about_us">Over Ons</a></li>
+                <li><a href="#services" data-i18n="services">Diensten</a></li>
+                <li><a href="portfolio.html" data-i18n="portfolio">Portfolio</a></li>
+                <li><a href="pricing.html" data-i18n="pricing">Tarieven</a></li>
+                <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+                <li><a href="blog.html" data-i18n="blog">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="cta">
+            <a href="#book-now" class="cta-button" data-i18n="book_now">Boek Nu</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero" aria-labelledby="hero-heading">
+            <div class="hero-content slide-in">
+                <h1 id="hero-heading">Welkom bij Onze Fotografie</h1>
+                <p>Op maat gemaakte fotoshoots die jouw verhaal vertellen.</p>
+            </div>
+        </section>
+
+        <section id="specialties" class="zoom-in" aria-labelledby="specialties-heading">
+            <h2 id="specialties-heading" data-i18n="specialties_heading">Onze Specialisaties</h2>
+            <div class="specialty">
+                <img src="images/portretfotografie.jpg" alt="Portret Fotografie" loading="lazy">
+                <h3 data-i18n="portrait_photography">Portret Fotografie</h3>
+                <p>Korte beschrijving van portretfotografie.</p>
+                <a href="#portrait" data-i18n="learn_more">Meer Informatie</a>
+            </div>
+            <div class="specialty">
+                <img src="images/commerciele_fotografie.jpg" alt="Commerciële Fotografie" loading="lazy">
+                <h3 data-i18n="commercial_photography">Commerciële Fotografie</h3>
+                <p>Korte beschrijving van commerciële fotografie.</p>
+                <a href="#commercial" data-i18n="learn_more">Meer Informatie</a>
+            </div>
+            <div class="specialty">
+                <img src="images/dierenfotografie.jpg" alt="Dierenfotografie" loading="lazy">
+                <h3 data-i18n="animal_photography">Dierenfotografie</h3>
+                <p>Korte beschrijving van dierenfotografie.</p>
+                <a href="#animal" data-i18n="learn_more">Meer Informatie</a>
+            </div>
+            <div class="specialty">
+                <img src="images/ecommerce.jpg" alt="E-commerce Fotografie" loading="lazy">
+                <h3 data-i18n="ecommerce_photography">E-commerce Fotografie</h3>
+                <p>Korte beschrijving van e-commerce fotografie.</p>
+                <a href="#ecommerce" data-i18n="learn_more">Meer Informatie</a>
+            </div>
+        </section>
+
+        <section id="testimonials" class="fade-in" aria-labelledby="testimonials-heading">
+            <h2 id="testimonials-heading" data-i18n="testimonials_heading">Wat Onze Klanten Zeggen</h2>
+            <div class="testimonial">
+                <img src="images/client1.jpg" alt="Klant 1" loading="lazy">
+                <p>"Geweldige ervaring, prachtige foto's!" - Klant 1</p>
+            </div>
+            <div class="testimonial">
+                <img src="images/client2.jpg" alt="Klant 2" loading="lazy">
+                <p>"De beste fotoshoot die ik ooit heb gehad!" - Klant 2</p>
+            </div>
+        </section>
+    </main>
+
+    <footer itemscope itemtype="http://schema.org/Organization" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">Footer</h2> <!-- For screen readers -->
+        <div class="contact-info" aria-labelledby="contact-info-heading">
+            <h3 id="contact-info-heading" data-i18n="contact_info">Contactgegevens</h3>
+            <address itemprop="address" data-i18n="address">Adres: 123 Hoofdstraat, Anytown, 12345</address>
+            <p itemprop="telephone" data-i18n="phone">Telefoon: 012-3456789</p>
+            <p itemprop="email" data-i18n="email">Email: <a href="mailto:info@fotografieopmaat.com">info@fotografieopmaat.com</a></p>
+        </div>
+        <div class="social-media" aria-labelledby="social-media-heading">
+            <h3 id="social-media-heading" class="sr-only">Social Media</h3>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img src="images/instagram-icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img src="images/facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <img src="images/linkedin-icon.png" alt="LinkedIn">
+            </a>
+        </div>
+        <div class="newsletter" aria-labelledby="newsletter-heading">
+            <h3 id="newsletter-heading" data-i18n="newsletter_prompt">Meld je aan voor onze nieuwsbrief:</h3>
+            <form>
+                <label for="newsletter-email" class="sr-only">Emailadres</label>
+                <input id="newsletter-email" type="email" placeholder="Jouw emailadres" data-i18n="email_placeholder" aria-label="Jouw emailadres">
+                <button type="submit" data-i18n="subscribe">Meld je aan</button>
+            </form>
+        </div>
+        <div class="legal-links" aria-labelledby="legal-links-heading">
+            <h3 id="legal-links-heading" class="sr-only">Juridische Links</h3>
+            <a href="#privacy" data-i18n="privacy_policy">Privacybeleid</a> |
+            <a href="#terms" data-i18n="terms_conditions">Algemene Voorwaarden</a>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/i18n.js"></script>
+</body>
+
+</html>
