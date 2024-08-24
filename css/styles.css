@@ -434,6 +434,39 @@ footer .legal-links {
     }
 }
 
+/* Mobile-friendly top bar */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .logo {
+        margin-bottom: 10px;
+    }
+
+    header .search-bar {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li {
+        width: 100%;
+    }
+
+    header nav ul li a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 10px 0;
+    }
+}
+
 /* Dropdown Menu */
 .dropdown {
     position: relative;
