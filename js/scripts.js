@@ -10,24 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Dark Mode Toggle
-    const darkModeToggle = document.createElement('button');
-    darkModeToggle.textContent = 'Toggle Dark Mode';
-    darkModeToggle.style.position = 'fixed';
-    darkModeToggle.style.bottom = '20px';
-    darkModeToggle.style.right = '20px';
-    darkModeToggle.style.padding = '10px';
-    darkModeToggle.style.backgroundColor = '#007bff';
-    darkModeToggle.style.color = 'white';
-    darkModeToggle.style.border = 'none';
-    darkModeToggle.style.borderRadius = '5px';
-    darkModeToggle.style.cursor = 'pointer';
-
-    darkModeToggle.addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
+    // Form Validation
+    const offerteForm = document.querySelector('#offerte form');
+    offerteForm.addEventListener('submit', function(e) {
+        const name = document.querySelector('#name').value;
+        const email = document.querySelector('#email').value;
+        if (!name || !email) {
+            e.preventDefault();
+            alert('Vul alstublieft alle verplichte velden in.');
+        }
     });
-
-    document.body.appendChild(darkModeToggle);
 
     // Zoomable Images
     const images = document.querySelectorAll('.zoomable');
@@ -56,11 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
         handleScrollAnimation(zoomInElements, 'animated');
         handleScrollAnimation(fadeInElements, 'animated');
     };
-
     window.addEventListener('scroll', animateOnScroll);
 
     // Contact Form Validation
-    const contactForm = document.querySelector('form');
+    const contactForm = document.querySelector('#offerte form');
     const validateEmail = email => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
     contactForm.addEventListener('submit', function(e) {
@@ -70,5 +61,48 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Voer een geldig e-mailadres in.');
         }
     });
-});
 
+    // Handle dropdown menu click for mobile devices
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    dropdownToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        const dropdownMenu = this.nextElementSibling;
+        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Search Bar Functionality
+    const searchBar = document.querySelector('.search-bar form');
+    searchBar.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const query = document.querySelector('.search-bar input').value.toLowerCase();
+        if (!query) {
+            alert('Voer een zoekterm in.');
+            return;
+        }
+        window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+    });
+
+    // Display Search Results on search.html
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchQuery = urlParams.get('q');
+    if (searchQuery) {
+        const contentSections = document.querySelectorAll('main section, main div');
+        const resultsContainer = document.getElementById('results-container');
+        let resultsFound = false;
+
+        contentSections.forEach(section => {
+            const text = section.textContent.toLowerCase();
+            if (text.includes(searchQuery)) {
+                const resultItem = document.createElement('div');
+                resultItem.classList.add('result-item');
+                resultItem.innerHTML = section.innerHTML;
+                resultsContainer.appendChild(resultItem);
+                resultsFound = true;
+            }
+        });
+
+        if (!resultsFound) {
+            resultsContainer.innerHTML = '<p>Geen resultaten gevonden.</p>';
+        }
+    }
+});
