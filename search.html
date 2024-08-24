@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoekresultaten - Fotografie Op Maat</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header id="header">
+        <div class="logo">
+            <a href="/" aria-label="Home">
+                <img src="https://fotografieopmaat.com/images/Logo.png" alt="Fotografie Op Maat Logo">
+                Fotografie Op Maat
+            </a>
+        </div>
+        <div class="search-bar">
+            <form action="search.html" method="GET">
+                <input type="text" name="q" placeholder="Zoek..." required>
+                <button type="submit">Zoeken</button>
+            </form>
+        </div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html" data-i18n="home">Home</a></li>
+                <li><a href="over-ons.html" class="cta-button" data-i18n="about_us">Over Ons</a></li>
+                <li class="dropdown">
+                    <a href="#services" data-i18n="services" class="dropdown-toggle">Diensten</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#portrait" data-i18n="portrait">Portretfotografie</a></li>
+                        <li><a href="#commercial" data-i18n="commercial">Commerciële Fotografie</a></li>
+                        <li><a href="#animal" data-i18n="animal">Dierenfotografie</a></li>
+                        <li><a href="#ecommerce" data-i18n="ecommerce">E-commerce Fotografie</a></li>
+                    </ul>
+                </li>
+                <li><a href="#offerte" class="cta-button" data-i18n="book_now">Offerte Aanvragen</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="search-results" aria-labelledby="search-results-heading">
+            <h2 id="search-results-heading" data-i18n="search_results">Zoekresultaten</h2>
+            <div id="results-container"></div>
+        </section>
+    </main>
+
+    <footer itemscope itemtype="http://schema.org/Organization" aria-labelledby="footer-heading">
+        <div class="contact-info" aria-labelledby="contact-info-heading">
+            <h3 id="contact-info-heading" data-i18n="contact_info">Contactgegevens</h3>
+            <address itemprop="address" data-i18n="address">Adres: Proffesor Kohnstammstraat 28, Utrecht, 3555WH</address>
+            <p itemprop="telephone" data-i18n="phone">Telefoon: 0680095058</p>
+            <p itemprop="email" data-i18n="email">E-mail: <a href="mailto:info@fotografieopmaat.com">info@fotografieopmaat.com</a></p>
+        </div>
+        <div class="social-media" aria-labelledby="social-media-heading">
+            <h3 id="social-media-heading" class="sr-only">Social Media</h3>
+            <a href="https://www.instagram.com/fotografieopmaat_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img src="https://fotografieopmaat.com/images/Instagram_icon.png" alt="Instagram">
+                @fotografieopmaat_
+            </a>
+        </div>
+        <div class="legal-links" aria-labelledby="legal-links-heading">
+            <h3 id="legal-links-heading" class="sr-only">Juridische Links</h3>
+            <a href="privacy.html" data-i18n="privacy_policy">Privacybeleid</a> |
+            <a href="terms.html" data-i18n="terms_conditions">Algemene Voorwaarden</a>
+        </div>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
