@@ -21,7 +21,7 @@
     <link rel="canonical" href="https://fotografieopmaat.com/">
     <link rel="icon" href="https://fotografieopmaat.com/favicon.ico" type="image/x-icon">
     <title>Fotografie Op Maat - Utrecht</title>
-    <link rel="stylesheet" href="https://fotografieopmaat.com/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FKD5V1VLPQ"></script>
@@ -33,6 +33,7 @@
     </script>
     <!-- End Google Analytics -->
 
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "http://schema.org",
@@ -65,9 +66,16 @@
                 Fotografie Op Maat
             </a>
         </div>
+        <div class="search-bar">
+            <form action="search.html" method="GET">
+                <input type="text" name="q" placeholder="Zoek..." required>
+                <button type="submit">Zoeken</button>
+            </form>
+        </div>
         <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="#home" data-i18n="home">Home</a></li>
+                <li><a href="/" data-i18n="home">Home</a></li>
+                <li><a href="over-ons.html" class="cta-button" data-i18n="about_us">Over Ons</a></li>
                 <li><a href="#offerte" class="cta-button" data-i18n="book_now">Offerte Aanvragen</a></li>
             </ul>
         </nav>
@@ -87,42 +95,65 @@
                 <div class="specialty">
                     <img src="https://fotografieopmaat.com/images/portretfotografie.jpg" alt="Portretfotografie" loading="lazy">
                     <h3 data-i18n="portrait_photography">Portretfotografie</h3>
-                    <a href="#offerte" data-i18n="learn_more">Offerte Aanvragen</a>
+                    <p>In elk portret zoek ik naar de echte jij. Door een ontspannen sfeer creëer ik foto's die jouw persoonlijkheid vastleggen.</p>
                 </div>
                 <div class="specialty">
                     <img src="https://fotografieopmaat.com/images/commerciele_fotografie.jpg" alt="Commerciële Fotografie" loading="lazy">
                     <h3 data-i18n="commercial_photography">Commerciële Fotografie</h3>
-                    <a href="#offerte" data-i18n="learn_more">Offerte Aanvragen</a>
+                    <p>Hier draait het om jouw merk. Ik help bedrijven om hun visie en producten krachtig in beeld te brengen.</p>
                 </div>
                 <div class="specialty">
                     <img src="https://fotografieopmaat.com/images/dierenfotografie.jpg" alt="Dierenfotografie" loading="lazy">
                     <h3 data-i18n="animal_photography">Dierenfotografie</h3>
-                    <a href="#offerte" data-i18n="learn_more">Offerte Aanvragen</a>
+                    <p>Ik leg de bijzondere band tussen mens en dier vast. Met geduld en liefde voor dieren zorg ik voor levendige en spontane foto's.</p>
                 </div>
                 <div class="specialty">
                     <img src="https://fotografieopmaat.com/images/ecommerce.jpg" alt="E-commerce Fotografie" loading="lazy">
                     <h3 data-i18n="ecommerce_photography">E-commerce Fotografie</h3>
-                    <a href="#offerte" data-i18n="learn_more">Offerte Aanvragen</a>
+                    <p>Producten verdienen het om op hun best gezien te worden. Ik zorg voor heldere, aantrekkelijke foto's die de verkoop stimuleren.</p>
                 </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="zoom-in" aria-labelledby="testimonials-heading">
+            <h2 id="testimonials-heading" data-i18n="testimonials_heading">Klantbeoordelingen</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <img src="images/IMG_2348-2-Edit.jpg" alt="Client photo - Mr Frog" loading="lazy">
+                    <p>"Fantastische ervaring met deze fotograaf. Sterk aanbevolen!" - Mr Frog</p>
+                </div>
+                <div class="testimonial">
+                    <img src="images/IMG_3046.jpg" alt="Client photo - Fred" loading="lazy">
+                    <p>"Zeer tevreden met het eindresultaat, ik zou hier zeker terugkomen." - Fred</p>
+                </div>
+                <!-- Add more testimonials here if needed -->
             </div>
         </section>
 
         <section id="offerte" class="fade-in" aria-labelledby="offerte-heading">
             <h2 id="offerte-heading" data-i18n="offerte_heading">Offerte Aanvragen</h2>
             <form action="submit_quote_request.php" method="POST">
-                <label for="name">Naam:</label>
-                <input id="name" name="name" type="text" required>
-                <label for="email">E-mail:</label>
-                <input id="email" name="email" type="email" required>
-                <label for="service">Kies een dienst:</label>
-                <select id="service" name="service">
-                    <option value="portrait">Portretfotografie</option>
-                    <option value="commercial">Commerciële Fotografie</option>
-                    <option value="animal">Dierenfotografie</option>
-                    <option value="ecommerce">E-commerce Fotografie</option>
-                </select>
-                <label for="message">Uw bericht:</label>
-                <textarea id="message" name="message" rows="5"></textarea>
+                <div class="form-group">
+                    <label for="name">Naam:</label>
+                    <input id="name" name="name" type="text" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input id="email" name="email" type="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Kies een dienst:</label>
+                    <select id="service" name="service">
+                        <option value="portrait">Portretfotografie</option>
+                        <option value="commercial">Commerciële Fotografie</option>
+                        <option value="animal">Dierenfotografie</option>
+                        <option value="ecommerce">E-commerce Fotografie</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Uw bericht:</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                </div>
                 <button type="submit">Verzenden</button>
             </form>
         </section>
@@ -144,12 +175,12 @@
         </div>
         <div class="legal-links" aria-labelledby="legal-links-heading">
             <h3 id="legal-links-heading" class="sr-only">Juridische Links</h3>
-            <a href="#privacy" data-i18n="privacy_policy">Privacybeleid</a> |
-            <a href="#terms" data-i18n="terms_conditions">Algemene Voorwaarden</a>
+            <a href="privacy.html" data-i18n="privacy_policy">Privacybeleid</a> |
+            <a href="terms.html" data-i18n="terms_conditions">Algemene Voorwaarden</a>
         </div>
     </footer>
 
-    <script src="https://fotografieopmaat.com/js/scripts.js"></script>
+    <script src="js\scripts.js"></script>
 </body>
 
 </html>
