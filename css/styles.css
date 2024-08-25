@@ -454,30 +454,44 @@ footer .legal-links {
 
     header .logo {
         margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
     }
 
-    header .search-bar {
-        width: auto;
-        margin: 0 20px;
-        flex-grow: 1;
+    header .logo::after {
+        content: '▼';
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    header .search-bar,
+    header nav {
+        display: none;
+        width: 100%;
+    }
+
+    header.active .search-bar,
+    header.active nav {
+        display: flex;
+        flex-direction: column;
     }
 
     header nav ul {
-        flex-direction: row;
-        width: auto;
-        flex-grow: 1;
-        justify-content: space-around;
+        flex-direction: column;
+        width: 100%;
     }
 
     header nav ul li {
-        width: auto;
+        width: 100%;
     }
 
     header nav ul li a {
-        display: inline-block;
-        width: auto;
-        text-align: center;
-        padding: 10px 15px;
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 10px 0;
     }
 }
 
