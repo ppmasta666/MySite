@@ -105,4 +105,11 @@ document.addEventListener('DOMContentLoaded', function() {
             resultsContainer.innerHTML = '<p>Geen resultaten gevonden.</p>';
         }
     }
+
+    // Mobile-friendly top bar
+    const logo = document.querySelector('header .logo');
+    logo.addEventListener('click', function() {
+        const header = document.querySelector('header');
+        header.classList.toggle('active');
+    });
 });
