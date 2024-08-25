@@ -529,8 +529,8 @@ footer .legal-links {
     background-color: var(--accent-color);
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-menu {
+/* Show the dropdown menu on click */
+.dropdown.active .dropdown-menu {
     display: block;
     opacity: 1;
     transform: translateY(0);
