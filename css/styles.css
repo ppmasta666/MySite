@@ -282,6 +282,13 @@ footer .contact-info, footer .social-media, footer .newsletter, footer .legal-li
     margin-bottom: 15px;
 }
 
+/* Social Media Icons */
+.social-media img {
+    width: 30px;  /* Set a fixed width for social media icons */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure it does not exceed the container's width */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
@@ -325,4 +332,9 @@ footer .contact-info, footer .social-media, footer .newsletter, footer .legal-li
     footer .contact-info, footer .social-media, footer .newsletter, footer .legal-links {
         width: 100%;
     }
+
+    .social-media img {
+        width: 25px;  /* Reduce the size for smaller screens */
+    }
 }
+
