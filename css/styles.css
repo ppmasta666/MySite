@@ -22,8 +22,8 @@
 body {
     font-family: 'League Gothic', sans-serif;
     line-height: 1.6;
-    color: var(--light-text-color); /* Ensure text color is light */
-    background-color: var(--dark-background-color); /* Ensure background color is dark */
+    color: var(--light-text-color);
+    background-color: var(--dark-background-color);
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -33,33 +33,11 @@ body.privacy, body.terms {
     color: var(--light-text-color);
 }
 
-body.privacy header, body.terms header {
-    background-color: var(--secondary-color);
-    color: var(--light-text-color);
-}
-
-body.privacy main, body.terms main {
-    color: var(--light-text-color);
-}
-
-body.privacy main h2, body.terms main h2 {
-    color: var(--primary-color);
-}
-
-body.privacy footer, body.terms footer {
-    background-color: var(--secondary-color);
-    color: var(--light-text-color);
-}
-
-body.privacy section, body.terms section {
-    color: var(--light-text-color);
-}
-
 /* Header Styling */
 header {
     background-color: var(--secondary-color);
     color: var(--light-text-color);
-    padding: 20px;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,17 +54,17 @@ header .logo {
 }
 
 header .logo img {
-    height: 60px;
+    height: 50px;
     margin-right: 10px;
 }
 
 header .logo a {
     color: var(--light-text-color);
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     display: flex;
-    align-items: center; /* Center align the text with the logo */
+    align-items: center;
 }
 
 header nav {
@@ -96,13 +74,13 @@ header nav {
 header nav ul {
     display: flex;
     list-style: none;
-    gap: 15px;
+    gap: 10px;
 }
 
 header nav ul li a {
     color: var(--light-text-color);
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 12px;
     transition: background-color 0.3s;
 }
 
@@ -114,13 +92,13 @@ header nav ul li a:hover {
 /* Search Bar Styling */
 header .search-bar {
     position: relative;
-    width: 300px;
-    margin: 0 20px;
+    width: 250px;
+    margin: 0 15px;
 }
 
 header .search-bar input {
     width: 100%;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border-radius: 20px;
     border: 1px solid var(--search-bar-shadow);
     background-color: var(--search-bar-background);
@@ -157,12 +135,10 @@ header .search-bar button {
 
 /* Section Styling */
 section {
-    padding: 60px 20px;
-    text-align: left; /* Change to left for better readability */
-    box-shadow: none; /* Remove box-shadow */
-    border-radius: 0; /* Remove border-radius */
+    padding: 40px 15px;
+    text-align: left;
     margin-bottom: 20px;
-    color: var(--secondary-color); /* Ensure text color is set */
+    color: var(--secondary-color);
 }
 
 /* Specialties Section */
@@ -171,21 +147,17 @@ section {
     color: var(--light-text-color);
 }
 
-#specialties h2 {
-    color: var(--primary-color);
-}
-
 .specialties-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .specialty {
     background-color: var(--accent-color);
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -202,8 +174,8 @@ section {
 }
 
 .specialty h3 {
-    margin: 15px 0;
-    font-size: 1.5rem;
+    margin: 10px 0;
+    font-size: 1.4rem;
     color: var(--primary-color);
 }
 
@@ -228,13 +200,13 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .testimonial {
     background-color: var(--accent-color);
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -247,54 +219,13 @@ section {
 }
 
 .testimonial p {
-    margin-top: 15px;
+    margin-top: 10px;
     color: var(--light-text-color);
-}
-
-/* Offerte Aanvragen Section */
-#offerte {
-    background-color: var(--secondary-color);
-    color: var(--light-text-color);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 60px auto;
-    padding: 20px;
-}
-
-#offerte form {
-    background-color: var(--accent-color);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-#offerte label {
-    font-weight: bold;
-}
-
-#offerte input,
-#offerte select,
-#offerte textarea,
-#offerte button {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-#offerte button {
-    background-color: var(--cta-background-color);
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#offerte button:hover {
-    background-color: var(--cta-hover-color);
 }
 
 /* Form Styling */
 form .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 form label {
@@ -305,7 +236,7 @@ form label {
 
 form input, form select, form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
@@ -314,7 +245,7 @@ form input, form select, form textarea {
 form button {
     background-color: var(--cta-background-color);
     color: white;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -326,7 +257,7 @@ form button:hover {
 
 /* Footer Styling */
 footer {
-    padding: 30px 20px;
+    padding: 20px 15px;
     background-color: var(--secondary-color);
     color: var(--light-text-color);
     display: flex;
@@ -343,201 +274,55 @@ footer a:hover {
     color: var(--cta-hover-color);
 }
 
-footer .contact-info,
-footer .social-media,
-footer .newsletter,
-footer .legal-links {
+footer .contact-info, footer .social-media, footer .newsletter, footer .legal-links {
     background-color: var(--accent-color);
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-/* Social Media Icons */
-.social-media a {
-    display: flex;
-    align-items: center;
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-.social-media a img {
-    margin-right: 5px;
-}
-
-.social-media a:hover {
-    text-decoration: underline;
-}
-
-.social-media img {
-    width: 30px;
-    margin-right: 10px;
-    transition: transform 0.3s ease;
-}
-
-.social-media img:hover {
-    transform: scale(1.1);
+    margin-bottom: 15px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    header .logo img {
+        height: 45px;
+    }
+
     header nav ul {
         flex-direction: column;
+        width: 100%;
+    }
+
+    header .search-bar {
+        width: 100%;
+        margin: 10px 0;
     }
 
     .hero-content {
         max-width: 90%;
     }
 
-    .specialties-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .specialties-grid, .testimonials-grid {
+        grid-template-columns: 1fr;
     }
 
-    .specialty {
+    .specialty, .testimonial {
         width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .testimonial {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .contact-info, .social-media, .newsletter, .legal-links {
-        width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     footer {
         flex-direction: column;
-        text-align: center;
-    }
-}
-
-/* Add responsive design */
-@media (max-width: 768px) {
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
-    .search-bar form {
-        display: flex;
-        flex-direction: column;
-    }
-    .search-bar input, .search-bar button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-}
-
-/* Mobile-friendly top bar */
-@media (max-width: 768px) {
-    header {
-        flex-direction: row;
         align-items: center;
     }
 
-    header .logo {
-        margin-bottom: 0;
+    footer .contact-info, footer .social-media, footer .newsletter, footer .legal-links {
+        width: 100%;
     }
-
-    header .search-bar {
-        width: auto;
-        margin: 0 20px;
-    }
-
-    header nav ul {
-        flex-direction: row;
-        width: auto;
-    }
-
-    header nav ul li {
-        width: auto;
-    }
-
-    header nav ul li a {
-        display: inline-block;
-        width: auto;
-        text-align: center;
-        padding: 10px 15px;
-    }
-}
-
-/* Dropdown Menu */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%; /* Ensure the dropdown starts under the button */
-    left: 0; /* Align to the left of the button */
-    background-color: var(--secondary-color);
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.dropdown-menu li {
-    padding: 12px 16px;
-}
-
-.dropdown-menu li a {
-    color: var(--light-text-color);
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-menu li a:hover {
-    background-color: var(--accent-color);
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-menu {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Centered Content Styling */
-.centered-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    text-align: center;
-    padding: 20px;
-    background-color: var(--background-color);
-    color: var(--light-text-color);
-}
-
-.centered-content section {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-#about-heading,
-#about p {
-    color: white;
-}
-
-/* Search Results */
-#results-container {
-    margin-top: 20px;
-}
-
-.result-item {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid var(--secondary-color);
-    border-radius: 5px;
 }
