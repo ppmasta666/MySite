@@ -437,33 +437,33 @@ footer .legal-links {
 /* Mobile-friendly top bar */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
     }
 
     header .logo {
-        margin-bottom: 10px;
+        margin-bottom: 0;
     }
 
     header .search-bar {
-        width: 100%;
-        margin: 10px 0;
+        width: auto;
+        margin: 0 20px;
     }
 
     header nav ul {
-        flex-direction: column;
-        width: 100%;
+        flex-direction: row;
+        width: auto;
     }
 
     header nav ul li {
-        width: 100%;
+        width: auto;
     }
 
     header nav ul li a {
-        display: block;
-        width: 100%;
-        text-align: left;
-        padding: 10px 0;
+        display: inline-block;
+        width: auto;
+        text-align: center;
+        padding: 10px 15px;
     }
 }
 
